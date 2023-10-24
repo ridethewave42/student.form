@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1, h2  {
+            text-align: center;
+        }
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input [type="text"], 
+        input [type="number"],
+        input [type="email"] {
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        #highscores, #allStudents {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Details</h1>
+    <form id="studentForm">
+
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" required><br />
+
+        <label>Student Name:</label>
+        <input type="text" id="studentName" required><br />
+
+        <label>Student UID:</label>
+        <input type="number" id="studentUID" required><br />
+
+        <label>Student Marks</label>
+        <input type="number" id="studentMarks" required><br />
+
+        <label>Student Email:</label>
+        <input type="email" id="studentEmail" required><br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h2>Students with marks > 80</h2>
+    <ul id="highscores"></ul>
+
+    <h2>All Student Details<h2>
+    <ul id="allStudents"></ul>
+    
+    <script src="student.form.js"></script>
+</body>
+</html>
